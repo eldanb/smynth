@@ -1,0 +1,13 @@
+{
+  "folders": [
+		{
+			"path": "factory-test/SmynthFactoryTest"
+		},
+		{
+			"path": "libs/smynth-voice-engine"
+		},
+		{
+			"path": "../util/SmynthPlayground"
+		}
+	]
+}

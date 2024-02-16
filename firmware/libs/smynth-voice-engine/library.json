@@ -1,0 +1,7 @@
+{
+  "name": "smynth-voice-engine",
+  "version": "1.0.0",
+  "description": "Smynth voice engine library",
+  "frameworks": "*",
+  "platforms": "*"
+}
