@@ -24,6 +24,8 @@
 		B97BEBCD2A74F41E00E06341 /* SmynthVoiceEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = B97BEBCB2A74F41E00E06341 /* SmynthVoiceEngine.mm */; };
 		B97BEBD02A74F6DC00E06341 /* SmynthVoiceEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = B97BEBCF2A74F6DC00E06341 /* SmynthVoiceEngine.h */; };
 		B97BEBD32A74F87300E06341 /* Anything.m in Sources */ = {isa = PBXBuildFile; fileRef = B97BEBD22A74F87300E06341 /* Anything.m */; };
+		B9D996DB2B92FE3700922801 /* Effect.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B9D996D92B92FE3700922801 /* Effect.hpp */; };
+		B9D996DC2B92FE3700922801 /* EnvelopeGenerator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B9D996DA2B92FE3700922801 /* EnvelopeGenerator.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		B97BEBCF2A74F6DC00E06341 /* SmynthVoiceEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmynthVoiceEngine.h; sourceTree = "<group>"; };
 		B97BEBD12A74F87200E06341 /* SmynthPlayground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmynthPlayground-Bridging-Header.h"; sourceTree = "<group>"; };
 		B97BEBD22A74F87300E06341 /* Anything.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Anything.m; sourceTree = "<group>"; };
+		B9D996D92B92FE3700922801 /* Effect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Effect.hpp; path = "../../../firmware/libs/smynth-voice-engine/include/Effect.hpp"; sourceTree = "<group>"; };
+		B9D996DA2B92FE3700922801 /* EnvelopeGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EnvelopeGenerator.hpp; path = "../../../firmware/libs/smynth-voice-engine/include/EnvelopeGenerator.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 		B97BEB9D2A74D92E00E06341 /* SmynthVoiceEngine */ = {
 			isa = PBXGroup;
 			children = (
+				B9D996D92B92FE3700922801 /* Effect.hpp */,
+				B9D996DA2B92FE3700922801 /* EnvelopeGenerator.hpp */,
 				B96AF39D2B7D549800EFB844 /* FixedPoint.hpp */,
 				B96AF39E2B7D549800EFB844 /* ToneGenerator.hpp */,
 				B96AF39C2B7D549800EFB844 /* Waveforms.hpp */,
@@ -167,8 +173,10 @@
 				B96AF38E2B702C4800EFB844 /* SyEngine.hpp in Headers */,
 				B97BEBD02A74F6DC00E06341 /* SmynthVoiceEngine.h in Headers */,
 				B96AF3A12B7D549800EFB844 /* ToneGenerator.hpp in Headers */,
+				B9D996DC2B92FE3700922801 /* EnvelopeGenerator.hpp in Headers */,
 				B96AF3A02B7D549800EFB844 /* FixedPoint.hpp in Headers */,
 				B96AF39F2B7D549800EFB844 /* Waveforms.hpp in Headers */,
+				B9D996DB2B92FE3700922801 /* Effect.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

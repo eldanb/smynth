@@ -17,3 +17,9 @@ void fillSampleBuffer(int16_t *buffer, int numChannels, int numFrames) {
     engine->renderSamples(buffer, numChannels, numFrames);
 }
 
+void restartNotes() {
+    if(!engine) {
+        engine = new SyEngine();
+    }
+    engine->configureToneGenerator();
+}

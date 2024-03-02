@@ -61,6 +61,7 @@ class SmynthEngineService: ObservableObject {
     }
     
     func play() throws {
+        restartNotes();
         try audioEngine.start();
     }
     

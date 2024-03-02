@@ -14,7 +14,7 @@
 #define LFO_FRAME_SAMPLE_COUNT (1 << LFO_FRAME_BITCOUNT)
 #define LFO_FRAME_BITMASK ((1 << LFO_FRAME_BITCOUNT) - 1)
 
-#define MAX_ENVELOPE_KEYFRAMES 8
+#define MAX_ENVELOPE_KEYFRAMES 16
 
 struct EnvelopeKeyFrame
 {
@@ -206,13 +206,14 @@ public:
     using AlgorithmOne = ModulatedOscilator<0, NonModulatedOscilator<1>>;
 
     /*using AlgorithmTwo = ModulatedOscilator<0, ModulatedOscilator<1, Mixer<2, NonModulatedOscilator<3>, NonModulatedOscilator<4>>>>;*/
-    using AlgorithmTwo = Mixer<
+    /*using AlgorithmTwo = Mixer<
         ModulatedOscilator<0,
                            ModulatedOscilator<1,
                                               Mixer<NonModulatedOscilator<3>, NonModulatedOscilator<4>>>>,
         ModulatedOscilator<2,
-                           Mixer<NonModulatedOscilator<5>, NonModulatedOscilator<6>>>>;
-    // using AlgorithmOne = ModulatedOscilator<0,  ZeroOscillator>;
+                           Mixer<NonModulatedOscilator<5>, NonModulatedOscilator<6>>>>;*/
+    using AlgorithmTwo = ModulatedOscilator<0, NonModulatedOscilator<1>>;
+    // using AlgorithmTwo = NonModulatedOscilator<0>;
 };
 
 template <int GENERATOR>

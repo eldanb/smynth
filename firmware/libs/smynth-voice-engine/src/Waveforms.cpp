@@ -13,7 +13,7 @@ Waveforms::Waveforms()
     Waveforms::Sine = new SampleValue[WAVEFORM_LOOKUPTABLE_COUNT];
     for (int i = 0; i < WAVEFORM_LOOKUPTABLE_COUNT; i++)
     {
-        Sine[i] = sin(((double)i / WAVEFORM_LOOKUPTABLE_COUNT) * (2 * 6.28)) * 32768;
+        Sine[i] = sin(((double)i / WAVEFORM_LOOKUPTABLE_COUNT) * (2 * 3.14)) * 32768;
     }
 }
 

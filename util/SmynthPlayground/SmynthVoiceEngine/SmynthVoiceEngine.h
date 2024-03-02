@@ -9,4 +9,5 @@
 
 
 FOUNDATION_EXPORT double SmynthVoiceEngineVersionNumber;
+FOUNDATION_EXPORT void restartNotes();
 FOUNDATION_EXPORT void fillSampleBuffer(int16_t *buffer, int numChannels, int numFrames);

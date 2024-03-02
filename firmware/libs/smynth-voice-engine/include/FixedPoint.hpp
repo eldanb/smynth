@@ -77,6 +77,73 @@ private:
     UnderlyingIntegral _value;
 };
 
+
+class fFixedPoint
+{
+public:
+    
+    fFixedPoint()
+        : fFixedPoint(0)
+    {
+    }
+
+    fFixedPoint(double d) : _value(d)
+    {
+    }
+
+    fFixedPoint operator*(const fFixedPoint other) const
+    {
+        return fFixedPoint(_value *other._value);
+    }
+
+    fFixedPoint operator*(const int32_t other) const
+    {
+        return fFixedPoint((_value * other));
+    }
+
+    fFixedPoint operator/(const int32_t other) const
+    {
+        return fFixedPoint((_value / other));
+    }
+
+    fFixedPoint operator+(const fFixedPoint other) const
+    {
+        return fFixedPoint(_value + other._value);
+    }
+
+    fFixedPoint operator-(const fFixedPoint other) const
+    {
+        return fFixedPoint(_value - other._value);
+    }
+
+    fFixedPoint operator>>(int shiftAmount) const
+    {
+        return fFixedPoint(_value / (1 << shiftAmount));
+    }
+
+    void maskIntegralPort(int mask)
+    {
+        int integral = (int)_value;
+        
+        _value = (integral & mask) + (_value - integral);
+    }
+
+    operator int()
+    {
+        return (int)_value;
+    }
+
+    int getScaledValue() const
+    {
+        return _value * 65536;
+    }
+
+private:
+
+    float _value;
+};
+
 using SampleValue = FixedPoint<16>;
+//using SampleValue = fFixedPoint;
 
 
